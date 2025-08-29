@@ -14,7 +14,7 @@ const GraphDisplay = ({ graphData }) => {
 
   useEffect(() => {
     if (graphData.nodes && graphData.nodes.length > 0 && cyRef.current) {
-      const cy = Cytoscape({
+      Cytoscape({ // Simply call the function without assigning it to a variable
         container: cyRef.current,
         elements: graphData,
         style: [
